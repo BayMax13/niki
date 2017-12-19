@@ -33,7 +33,6 @@ ll recur(ll pos,int prv){
 	return dp[pos][prv+1] = recur(pos-1,1)%mod;
     return dp[pos][prv+1] = (recur(pos-1,0)%mod + recur(pos-1,1)%mod)%mod;
 }*/
-map < ll , ll > F;
 void fib(ll n, ll&x, ll&y){
     if(n==0){
 	x = 0;
@@ -69,10 +68,8 @@ void solve(){
 }
 int main()
 {
-    F[0] = F[1] = 1;
     int t;
     cin>>t;
     while(t--)
 	solve();
 }
-
